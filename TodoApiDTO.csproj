@@ -5,13 +5,50 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TodoList.BLL\**" />
+    <Compile Remove="TodoList.DAL\**" />
+    <Compile Remove="TodoList.Entities\**" />
+    <Compile Remove="TodoList.IBLL\**" />
+    <Compile Remove="TodoList.IDAL\**" />
+    <Content Remove="TodoList.BLL\**" />
+    <Content Remove="TodoList.DAL\**" />
+    <Content Remove="TodoList.Entities\**" />
+    <Content Remove="TodoList.IBLL\**" />
+    <Content Remove="TodoList.IDAL\**" />
+    <EmbeddedResource Remove="TodoList.BLL\**" />
+    <EmbeddedResource Remove="TodoList.DAL\**" />
+    <EmbeddedResource Remove="TodoList.Entities\**" />
+    <EmbeddedResource Remove="TodoList.IBLL\**" />
+    <EmbeddedResource Remove="TodoList.IDAL\**" />
+    <None Remove="TodoList.BLL\**" />
+    <None Remove="TodoList.DAL\**" />
+    <None Remove="TodoList.Entities\**" />
+    <None Remove="TodoList.IBLL\**" />
+    <None Remove="TodoList.IDAL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\TodoItemsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 

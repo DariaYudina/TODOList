@@ -27,9 +27,14 @@ namespace TodoApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<TodoContext>(opt =>
+            //   opt.UseInMemoryDatabase("TodoList"));
+            services.AddSwaggerGen();
             services.AddDbContext<TodoContext>(opt =>
-               opt.UseInMemoryDatabase("TodoList"));
+                opt.UseSqlServer(Configuration.GetConnectionString("TodoListApiConnectionString")));
+
             services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +42,9 @@ namespace TodoApi
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
+                //app.UseDeveloperExceptionPage();
             }
 
             app.UseHttpsRedirection();
