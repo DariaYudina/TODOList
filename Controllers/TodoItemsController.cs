@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TodoApi.Models;
+using TodoList.DAL.Models;
+using TodoItem = TodoList.Entities.TodoItem;
 
-namespace TodoApi.Controllers
+namespace TodoList.DAL.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
