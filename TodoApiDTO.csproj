@@ -1,25 +1,29 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\**" />
     <Compile Remove="TodoList.BLL\**" />
     <Compile Remove="TodoList.DAL\**" />
     <Compile Remove="TodoList.Entities\**" />
     <Compile Remove="TodoList.IBLL\**" />
     <Compile Remove="TodoList.IDAL\**" />
+    <Content Remove="Migrations\**" />
     <Content Remove="TodoList.BLL\**" />
     <Content Remove="TodoList.DAL\**" />
     <Content Remove="TodoList.Entities\**" />
     <Content Remove="TodoList.IBLL\**" />
     <Content Remove="TodoList.IDAL\**" />
+    <EmbeddedResource Remove="Migrations\**" />
     <EmbeddedResource Remove="TodoList.BLL\**" />
     <EmbeddedResource Remove="TodoList.DAL\**" />
     <EmbeddedResource Remove="TodoList.Entities\**" />
     <EmbeddedResource Remove="TodoList.IBLL\**" />
     <EmbeddedResource Remove="TodoList.IDAL\**" />
+    <None Remove="Migrations\**" />
     <None Remove="TodoList.BLL\**" />
     <None Remove="TodoList.DAL\**" />
     <None Remove="TodoList.Entities\**" />
